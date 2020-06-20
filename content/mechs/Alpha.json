@@ -7,11 +7,6 @@
 	"flying": false,
 	"health": 300,
 	"weaponOffsetX": 0,
-	"weapon": {
-		"name": "zeusgun",
-		"length": 1.5,
-		"reload": 100,
-		"alternate": false,
 		"bullet":{
     "type": "FlakBulletType",
     "lifetime": 100,
@@ -35,5 +30,3 @@
 
 
 }
-}
-© 2020 GitHub, Inc.

@@ -40,7 +40,7 @@ public class LightRenderer{
 
         float res = color.toFloatBits();
         add(() -> {
-            Draw.color(res);
+            Draw.color(Color.green);
             Draw.alpha(opacity);
             Draw.rect(region, x, y);
         });

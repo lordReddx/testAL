@@ -1,7 +1,6 @@
 {
-	"builVisibility":"visible",
+	"builVisibility":"shown",
 	"requirements":[
 		{"item": "copper", "amount": 1}
 	]
-	"research":"core-shard"
 }

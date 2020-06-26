@@ -1,6 +1,7 @@
 {
-	"builVisibility":"campaignOnly",
+	"builVisibility":"visible",
 	"requirements":[
 		{"item": "copper", "amount": 1}
 	]
+	"research":"core-shard"
 }

@@ -1,4 +1,4 @@
-package io.anuke.mindustry.graphics;
+/*package io.anuke.mindustry.graphics;
 
 import io.anuke.arc.*;
 import io.anuke.arc.collection.*;
@@ -12,7 +12,7 @@ import io.anuke.arc.util.*;
 import static io.anuke.mindustry.Vars.state;
 
 /** Renders overlay lights. Client only. */
-public class LightRenderer{
+/*public class LightRenderer{
     private static final int scaling = 4;
     private float[] vertices = new float[24];
     private FrameBuffer buffer = new FrameBuffer(2, 2);

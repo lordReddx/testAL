@@ -1,2 +1,2 @@
 # testAL
-fortest
+fortests

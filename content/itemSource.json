@@ -1,0 +1,6 @@
+{
+	"builVisibility":"campaignOnly",
+	"requirements":[
+		{"item": "copper", "amount": 1}
+	]
+}

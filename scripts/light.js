@@ -1,4 +1,4 @@
-const ambientLight = newEffect(20, e => {
+/*const ambientLight = newEffect(20, e => {
     Draw.color(Color.white, Color.lightGray, e.fin());
 });
 

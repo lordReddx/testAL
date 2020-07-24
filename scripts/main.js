@@ -1,0 +1,1 @@
+require("blocks/distribution/gold-bridge-conveyor")

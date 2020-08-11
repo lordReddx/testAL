@@ -5,5 +5,5 @@
 	"description": "-",
 	//"version": "0.1",
 	//"minGameVersion": "",
-	"dependencies": ["multi-lib"]
+	//"dependencies": ["multi-lib"]
 }

@@ -1,8 +1,9 @@
 {
-	"name":"testAL",
-	"author":"[red]R[scarlet]E[crimson]D",
-	"description":"",
-	"version":"0.1",
-	"minGameVersion":"",
-	"dependencies":[]
+	"displayName": "testAL",
+	"name": "tAL",
+	"author": "[red]R[scarlet]E[crimson]D",
+	"description": "-",
+	//"version": "0.1",
+	//"minGameVersion": "",
+	"dependencies": ["multi-lib"]
 }

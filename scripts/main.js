@@ -1,1 +1,1 @@
-require("blocks/distribution/gold-bridge-conveyor")
+require("blocks/crafting/chemicalplant");

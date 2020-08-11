@@ -40,9 +40,11 @@ liquid-name is .json file name
 
 {
   _output:[
-    [/*items*/ [["coal"/*"CP"+"-"+"additive"*/, 2]],]],
+    [/*items*/ [["coal", 1]] /*liquids*/, null /*power*/, null],
+  ],
   _input:[
-    [/*items*/ [["lead", 1],["sand"/*"CP"+"-"+"iron"*/, 3]]/*liquids*/,[["oil", 4]  ]/*power*/, 1.3],
+    [/*items*/ [["lead", 5], ["copper", 3]] /*liquids*/, [["oil", 7] ] /*power*/, 1.3],
+  ],
   craftTimes:[150],
   //DON'T MODIFY THESE
   output:[],
@@ -62,11 +64,13 @@ multi.dumpToggle=false;
 /*
 YOU MUST NOT MODIFY VALUE OF
 THESE
+
 configurable=true;
 outputsPower=true;
 hasItems=true;
 hasLiquids=true;
 hasPower=true;
+
 */
 //using this without json. not recommanded because can cause error.
 multi.localizedName = "Chemical plant";

@@ -40,10 +40,30 @@ liquid-name is .json file name
 
 {
   _output:[
-    [/*items*/ [["coal"/*"CP"+"-"+"additive"*/, 2]],]],
+    [/*items*/ null                                                      /*liquids*/,null                        /*power*/,null],
+    [/*items*/ [          ["thorium",1]   ,   ["surge-alloy",2]         ]/*liquids*/,[        ["slag",5]        ]/*power*/,null],
+    [/*items*/ [  ["scrap",1]  ,  ["plastanium",2]  ,  ["spore-pod",2]  ]/*liquids*/,[        ["oil",5]         ]/*power*/,null],
+    [/*items*/ [                    ["silicon",1]                       ]/*liquids*/,null                        /*power*/,null],
+    [/*items*/ [      ["multi-lib-example"+"-"+"gun-powder",1]          ]/*liquids*/,null                        /*power*/,null],
+    [/*items*/ [          ["thorium",1]   ,   ["surge-alloy",3]         ]/*liquids*/,[        ["slag",3]        ]/*power*/,null],
+    [/*items*/ [  ["scrap",1]  ,  ["plastanium",2]  ,  ["spore-pod",2]  ]/*liquids*/,[        ["oil",5]         ]/*power*/,null],
+    [/*items*/ [                    ["silicon",1]                       ]/*liquids*/,null                        /*power*/,null],
+    [/*items*/ [      ["multi-lib-example"+"-"+"gun-powder",1]          ]/*liquids*/,null                        /*power*/,null],
+    [/*items*/ [          ["thorium",1]   ,   ["surge-alloy",3]         ]/*liquids*/,[  ["slag",5] , ["oil",4]  ]/*power*/,null],
+  ],
   _input:[
-    [/*items*/ [["lead", 1],["sand"/*"CP"+"-"+"iron"*/, 3]]/*liquids*/,[["oil", 4]  ]/*power*/, 1.3],
-  craftTimes:[150],
+    [/*items*/ [      ["sand",1]   ,   ["lead",2]             ]/*liquids*/,[  ["water",5] , ["cryofluid",3] ]/*power*/,null],
+    [/*items*/ [      ["coal",1]   ,   ["sand",1]             ]/*liquids*/,[          ["water",5]           ]/*power*/,1],
+    [/*items*/ [  ["pyratite",1]   ,   ["blast-compound",1]   ]/*liquids*/,[          ["water",5]           ]/*power*/,1],
+    [/*items*/ [                  ["sand",1]                  ]/*liquids*/,null                              /*power*/,null],
+    [/*items*/ [      ["sand",1]   ,   ["lead",2]             ]/*liquids*/,[          ["water",5]           ]/*power*/,null],
+    [/*items*/ [      ["coal",1]   ,   ["sand",1]             ]/*liquids*/,[          ["water",5]           ]/*power*/,1],
+    [/*items*/ [  ["pyratite",1]   ,   ["blast-compound",1]   ]/*liquids*/,[          ["water",5]           ]/*power*/,1],
+    [/*items*/ [                  ["sand",1]                  ]/*liquids*/,null                              /*power*/,null],
+    [/*items*/ [      ["sand",1]   ,   ["lead",2]             ]/*liquids*/,[          ["water",5]           ]/*power*/,null],
+    [/*items*/ [      ["coal",1]   ,   ["sand",1]             ]/*liquids*/,[          ["water",5]           ]/*power*/,1],
+  ],
+  craftTimes:[12,60,72,30,12,60,72,30,12,60],
   //DON'T MODIFY THESE
   output:[],
   input:[],
@@ -62,21 +82,22 @@ multi.dumpToggle=false;
 /*
 YOU MUST NOT MODIFY VALUE OF
 THESE
+
 configurable=true;
 outputsPower=true;
 hasItems=true;
 hasLiquids=true;
 hasPower=true;
+
 */
 //using this without json. not recommanded because can cause error.
-multi.localizedName = "Chemical plant";
-multi.description = "Produces additives to increase the octane number of fuel.";
-multi.itemCapacity = 10;
-multi.liquidCapacity = 15;
-multi.size = 3;
-multi.health = 730;
-multi.craftEffect = Fx.pulverizeMedium;
-multi.updateEffect = Fx.none;
-multi.research = "oil-extractor";
+multi.localizedName="multi";
+multi.description="multi";
+multi.itemCapacity= 30;
+multi.liquidCapacity= 20;
+multi.size= 4;
+multi.health= 100;
+multi.craftEffect= Fx.pulverizeMedium;
+multi.updateEffect=Fx.none;
 
-multi.requirements(Category.crafting, ItemStack.with(Items.copper, 189, Items.graphite, 178, Items.silicon, 191, Items.thorium, 180, Items.plastanium, 179,/*Items.iron, 200, Items.steel*/ ));
+multi.requirements(Category.crafting,ItemStack.with(Items.copper,75));

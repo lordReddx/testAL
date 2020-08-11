@@ -1,7 +1,7 @@
 //get script from multi-lib
 const multiLib=require("multi-lib/wrapper");
 //you can use GenericSmelter                                                    ▼this has to be same with .json file name
-const multi=multiLib.extend(GenericCrafter,GenericCrafter.GenericCrafterEntity,"chemicalplant",{
+const multi=multiLib.extend(GenericCrafter,GenericCrafter.GenericCrafterEntity,"multi",{
 // you can customize here ex) draw(tile)
 },
 /*length of output, input, crafTimes should be same.

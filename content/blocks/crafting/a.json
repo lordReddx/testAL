@@ -5,7 +5,7 @@
 	"health": 3000,
 	"size": 5,
 	"requirements": [
-		{ "item": "pluto", "amount": 1000}
+		{"item": "pluto", "amount": 1000}
 	],
 	"research": "silicon-smelter",
 	"hasPower": true,
@@ -15,8 +15,8 @@
 	"consumes": {
 		"power": 25,
 		"items": {
-			"items":[
-				{ "item": "pluto", "amount": 1}
+			"items": [
+				{"item": "pluto", "amount": 1},
 			]
 		}
 	},
@@ -24,19 +24,19 @@
 	"category": "crafting",
 	"idleSoundVolume": 0.5,
 	"itemCapacity": 24,
-	"outputItem":[
-		{ "item": "copper", "amount": 1},
-		{ "item": "lead", "amount": 1},
-		{ "item": "plastanium", "amount": 1},
-		{ "item": "phase-fabric", "amount": 1},
-		{ "item": "surge-alloy", "amount": 1},
-		{ "item": "metaglass", "amount": 1},
-		{ "item": "graphite", "amount": 1},
-		{ "item": "sand", "amount": 1},
-		{ "item": "coal", "amount": 1},
-		{ "item": "titanium", "amount": 1},
-		{ "item": "thorium", "amount": 1},
-		{ "item": "silicon", "amount": 1},
-		{ "item": "pluto", "amount": 1}
+	"outputItem": [
+		{"item": "copper", "amount": 1},
+		{"item": "lead", "amount": 1},
+		{"item": "plastanium", "amount": 1},
+		{"item": "phase-fabric", "amount": 1},
+		{"item": "surge-alloy", "amount": 1},
+		{"item": "metaglass", "amount": 1},
+		{"item": "graphite", "amount": 1},
+		{"item": "sand", "amount": 1},
+		{"item": "coal", "amount": 1},
+		{"item": "titanium", "amount": 1},
+		{"item": "thorium", "amount": 1},
+		{"item": "silicon", "amount": 1},
+		{"item": "pluto", "amount": 1}
 	]
 } 

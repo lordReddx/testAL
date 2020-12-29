@@ -10,7 +10,6 @@
 	"research": "silicon-smelter",
 	"hasPower": true,
 	"hasItems": true,
-	"hasLiquids": false,
 	"craftTime": 3,
 	"consumes": {
 		"power": 25,

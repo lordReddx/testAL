@@ -24,7 +24,7 @@
 	"category": "crafting",
 	"idleSoundVolume": 0.5,
 	"itemCapacity": 24,
-	"outputItem": [
+	"results": [
 		{"item": "copper", "amount": 1},
 		{"item": "lead", "amount": 1},
 		{"item": "plastanium", "amount": 1},

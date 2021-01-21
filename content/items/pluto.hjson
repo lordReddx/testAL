@@ -1,6 +1,0 @@
-type: material
-name: pluto
-description: pluto
-color: #FF0000
-cost: 1.7
-alwaysUnlocked: true

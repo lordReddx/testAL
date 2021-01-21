@@ -17,3 +17,26 @@ reqirements: [
 	composite/570
 ]
 category: turret
+
+range: 624
+rotateSpeed: 50
+
+heatColor: #FFFF00
+shootEffect: shootBigSmoke
+cooldown: 0.05
+targetAir: true
+targetGround: true
+chargeTime: 20
+chargeEffects: 5
+chargeEffect: lancerLaserCharge
+chargeSound: laserCharge
+
+shootType: {
+	type: ContinuousLaserBulletType
+	damage: 170
+	length: 624
+	width: 55
+}
+powerUse: 34
+
+research: duo

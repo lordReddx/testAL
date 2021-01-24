@@ -3,19 +3,11 @@ name: project-97
 description: Massive laser. No chance of survival.
 
 consumes: {
-	liquids:{
-		liquid: {		
-			liquid: water
-			amount: 5
-			optional: true
-			booster: true
-		}
-		liquid: {
-			liquid: cryofluid
-			amount: 5
-			optional: true
-			booster: true
-		}
+	liquid: {		
+		liquid: water
+		amount: 5
+		optional: true
+		booster: true
 	}
 }
 

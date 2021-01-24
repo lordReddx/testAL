@@ -1,0 +1,68 @@
+type: LaserTurret
+name: project-97
+description: Massive laser. No chance of survival.
+
+consumes: {
+	liquids:{
+		liquid: {		
+			liquid: water
+			amount: 5
+			optional: true
+			booster: true
+		}
+		liquid: {
+			liquid: cryofluid
+			amount: 5
+			optional: true
+			booster: true
+		}
+	}
+}
+
+health: 7100
+size: 6
+requirements: [
+	copper/1200
+	lead/1200
+	metaglass/500
+	graphite/800
+	silicon/1000
+	plastanium/700
+	phase-fabric/200
+	surge-alloy/720
+	steel/1000
+	composite/570
+]
+category: turret
+
+range: 624
+rotateSpeed: 20
+
+reloadTime: 120
+
+heatColor: #FFFF00
+shootEffect: shootBigSmoke
+shootSound: project97
+loopSound: beam
+cooldown: 0.05
+targetAir: true
+targetGround: true
+chargeTime: 20
+chargeEffects: 5
+chargeEffect: lancerLaserCharge
+chargeSound: laserCharge
+recoilAmount: 4
+firingMoveFract: 0.5
+shootDuration: 120
+
+shootType: {
+	type: ContinuousLaserBulletType
+	damage: 170
+	length: 624
+	hitEffect: hitMeltdown
+	hitColor: meltdownHit
+	drawSize: 500
+}
+powerUse: 34
+
+research: railgun

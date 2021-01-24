@@ -22,8 +22,6 @@ requirements: [
 	plastanium/700
 	phase-fabric/200
 	surge-alloy/720
-	steel/1000
-	composite/570
 ]
 category: turret
 
@@ -34,7 +32,6 @@ reloadTime: 120
 
 heatColor: #FFFF00
 shootEffect: shootBigSmoke
-shootSound: project97
 loopSound: beam
 cooldown: 0.05
 targetAir: true
@@ -57,4 +54,3 @@ shootType: {
 }
 powerUse: 34
 
-research: railgun

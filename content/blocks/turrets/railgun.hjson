@@ -1,7 +1,6 @@
 type: ItemTurret
 name: Railgun
 description: An electromagnetic mass accelerator that accelerates a conductive projectile along two metal guides using the Lorentz force.
-
 health: 5100
 size: 3
 requirements: [
@@ -16,44 +15,37 @@ requirements: [
 	surge-alloy/250
 ]
 category: turret
-
-
-range: 400
-rotateSpeed: 15
-
-reloadTime: 70
-
-//timerTarget:
-//targetInterval:
 heatColor: #FF0000
 shootEffect: lancerLaserShoot
 smokeEffect: lancerLaserShootSmoke
 shootSound: railgunT
-maxAmmo: 10
 ammoPerShot: 1
+range: 400
+reloadTime: 70
 inaccuracy: 0.1
-//velocityInaccuracy:
 shots: 1
 spread: 3
 recoilAmount: 4
 cooldown: 0.04
+rotateSpeed: 15
 shootCone: 1.6
 shootShake: 2
 targetAir: true
 targetGround: true
-
+coolantMultiplayer: 6.9
+maxAmmo: 10
 ammoTypes: {
 	plastanium: {
-		type: RailBulletType
 		lifetime: 200
 		speed: 40
 		damage: 510
 		hitEffect: hitBulletBig
 		despawnEffect: hitBulletBig
+		shootEffect: shootBig
+		smokeEffect: shootBigSmoke
 		homingPower: 1
 		homingRange: 50
 	}
 }
-
 research: foreshadow
 //fCP

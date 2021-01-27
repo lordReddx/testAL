@@ -21,11 +21,12 @@ reloadTime: 50
 heatColor: #FF0000
 shootEffect: shootSmall
 smokeEffect: fireSmoke
+ammoUseEffect: lightningShoot
 shootSound: project8
 maxAmmo: 20
 ammoPerShot: 1
 inaccuracy: 7
-shots: 5
+shots: 3
 spread: 15
 recoilAmount: 1.2
 restitution: 0.01

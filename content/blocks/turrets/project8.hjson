@@ -1,0 +1,64 @@
+type: ItemTurret
+name: project-8
+description: Electric shotgun.
+
+health: 510
+size: 1
+requirements: [ 
+	copper/500
+	metaglass/350
+	graphite/400
+	silicon/550
+	plastanium/410
+	] 
+category: turret
+
+range: 120
+rotateSpeed: 7
+
+reloadTime: 50
+
+heatColor: #FF0000
+shootEffect: shootSmall
+smokeEffect: fireSmoke
+ammoUseEffect: lightningShoot
+shootSound: project8
+maxAmmo: 20
+ammoPerShot: 1
+inaccuracy: 7
+shots: 5
+spread: 15
+recoilAmount: 1.2
+restitution: 0.01
+cooldown: 0.03
+shootCone: 3
+shootShake: 0.4
+targetAir: true
+targetGround: true
+
+//length: brange
+
+ammoTypes: {
+		graphite: {
+			type: ShrapnelBulletType
+			lifetime: 2.4
+			speed: 50
+			damage: 78
+			despawnEffect: steam
+			shootEffect: shootSmall
+			smokeEffect: smoke
+			width: 5
+			}
+		thorium: {
+			type: ShrapnelBulletType
+			lifetime: 2.4
+			speed: 50
+			damage: 110
+			despawnEffect: steam
+			shootEffect: shootSmall
+			smokeEffect: smoke
+			width: 5
+			}
+		}
+
+research: lancer

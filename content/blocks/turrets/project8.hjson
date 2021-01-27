@@ -21,7 +21,6 @@ reloadTime: 50
 heatColor: #FF0000
 shootEffect: shootSmall
 smokeEffect: fireSmoke
-ammoUseEffect: lightningShoot
 shootSound: project8
 maxAmmo: 20
 ammoPerShot: 1

@@ -1,0 +1,10 @@
+name: Unit Spawner
+
+requirements: [
+	copper/10
+]
+solid: true
+update: true
+configurable: true
+
+research: core-shard

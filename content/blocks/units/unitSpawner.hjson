@@ -12,12 +12,14 @@ solid: true
 update: true
 configurable: true
 
-UnitSpawnAbility:[
-  type: mono
-  spawnTime: 60
-  spawnX: 0
-  spawnY: 0
-  spawnEffect: spawn
- ]
+abilities: {
+  UnitSpawnAbility:[
+   type: mono
+   spawnTime: 60
+   spawnX: 0
+   spawnY: 0
+   spawnEffect: spawn
+   ]
+ } 
 
 research: core-shard

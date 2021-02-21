@@ -18,3 +18,9 @@ unitSpawn.requirements(Category.units);
 unitSpawn.abilities.add( new UnitSpawnAbility(mono, 1, 0, 0,));
 
 */
+Events.on(TapEvent, event => {
+  //display toast on top of screen when the unit was a player
+  if(event.tap.isPlayer()){
+    Vars.ui.hudfrag.showToast("Pathetic.");
+  }
+})

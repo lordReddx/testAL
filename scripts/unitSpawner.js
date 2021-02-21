@@ -1,4 +1,4 @@
-const spawnEffect = Effect ("spawn", 60 {});
+/*const spawnEffect = Effect ("spawn", 60 {});
 
 const unitSpawn = extendContent(Block, "unitSpawner", {
 	buildConfiguration(table) {
@@ -17,3 +17,4 @@ unitSpawn.size = 2;
 unitSpawn.requirements(Category.units);
 unitSpawn.abilities.add( new UnitSpawnAbility(mono, 1, 0, 0,));
 
+*/

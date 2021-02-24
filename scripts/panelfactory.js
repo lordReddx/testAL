@@ -19,21 +19,21 @@ try{
     */
     {
       input:{
-        liquids: ["water/5", "badGuns-lava/5", "cryofluid/2"],
+        liquids: ["water/5", "tAL-lava/5", "cryofluid/2"],
         power: 1.1
       },
       output: {
-        items: ["badGuns-solidstone/2"],
+        items: ["tAL-solidstone/2"],
       },
       craftTime: 35
     },
     {
       input:{
-        items: ["badGuns-solidstone/4"],
+        items: ["tAL-solidstone/4"],
         power: 3
       },
       output: {
-        items: ["badGuns-stonepanel/2"],
+        items: ["tAL-stonepanel/2"],
       },
       craftTime: 95
     },
@@ -44,7 +44,7 @@ try{
         power: 2
       },
       output: {
-        items: ["badGuns-metapanel/2"],
+        items: ["tAL-metapanel/2"],
       },
       craftTime: 90
     },

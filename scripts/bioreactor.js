@@ -17,36 +17,36 @@ try{
       craftTime:80,
     },
     */
-    /*{
+    {
       input:{
         items: ["plastanium/6","phase-fabric/2","metaglass/5"],
         liquids: ["water/2"],
         power: 3.4
       },
       output: {
-        items: ["badGuns-biotissue/2"],
+        items: ["tAL-biotissue/2"],
       },
       craftTime: 90
-    },*/
+    },
     {
       input: {
-        items: ["badGuns-biotissue/4","thorium/5","plastanium/2"],
+        items: ["tAL-biotissue/4","thorium/5","plastanium/2"],
         liquids: ["water/3.4"],
         power: 2.1
       },
       output: {
-        items: ["badGuns-biopanel/4"],
+        items: ["tAL-biopanel/4"],
       },
       craftTime: 300
     },
     {
       input: {
-        items: ["badGuns-biopanel/2","surge-alloy/1","plastanium/2"],
+        items: ["tAL-biopanel/2","surge-alloy/1","plastanium/2"],
         liquids: ["cryofluid/3"],
         power: 5
       },
       output: {
-        items: ["badGuns-bioalloy/1"],
+        items: ["tAL-bioalloy/1"],
       },
       craftTime: 330
     },
@@ -54,12 +54,12 @@ try{
 
       input: {
 
-        items: ["badGuns-biotissue/1"],
-        liquids: ["badGuns-acid/3.2"],
+        items: ["tAL-biotissue/1"],
+        liquids: ["tAL-acid/3.2"],
         power: 5.1
       },
       output: {
-        items: ["badGuns-acidtissue/1"],
+        items: ["tAL-acidtissue/1"],
       },
       craftTime: 300
     },
@@ -67,12 +67,12 @@ try{
     
       input: {
     
-        items: ["badGuns-biotissue/1", "titanium/2"],
+        items: ["tAL-biotissue/1", "titanium/2"],
         liquids: ["cryofluid/3"],
         power: 5.1
       },
       output: {
-        items: ["badGuns-frozentissue/1"],
+        items: ["tAL-frozentissue/1"],
       },
       craftTime: 300
     },
@@ -80,12 +80,12 @@ try{
     
       input: {
     
-        items: ["badGuns-biotissue/1", "blast-compound/3"],
-        liquids: ["badGuns-lava/2"],
+        items: ["tAL-biotissue/1", "blast-compound/3"],
+        liquids: ["tAL-lava/2"],
         power: 5.1
       },
       output: {
-        items: ["badGuns-lavatissue/1"],
+        items: ["tAL-lavatissue/1"],
       },
       craftTime: 300
     },
@@ -93,12 +93,12 @@ try{
     
       input: {
     
-        items: ["badGuns-acidtissue/2", "badGuns-frozentissue/2", "badGuns-lavatissue/2"],
+        items: ["tAL-acidtissue/2", "tAL-frozentissue/2", "tAL-lavatissue/2"],
         liquids: ["cryofluid/3"],
         power: 4.1
       },
       output: {
-        items: ["badGuns-cosmotissue/2"],
+        items: ["tAL-cosmotissue/2"],
       },
       craftTime: 120
     },
@@ -106,18 +106,18 @@ try{
     
       input: {
     
-        items: ["badGuns-cosmotissue/100"],
+        items: ["tAL-cosmotissue/100"],
         power: 6
       },
       output: {
-        items: ["badGuns-biocore/1"],
+        items: ["tAL-biocore/1"],
       },
       craftTime: 300
     },
   ],{
     draw(){
-      Draw.rect(Core.atlas.find("badGuns-bioreactor-weave"), this.x, this.y);
-      Draw.rect(Core.atlas.find("badGuns-bioreactor-bottom"), this.x, this.y);
+      Draw.rect(Core.atlas.find("tAL-bioreactor-weave"), this.x, this.y);
+      Draw.rect(Core.atlas.find("tAL-bioreactor-bottom"), this.x, this.y);
       biocrafter.drawer = new DrawWeave();
     }
   },{

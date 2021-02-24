@@ -15,9 +15,6 @@
 
 //Defense region
 
-require("bioWall")
-require("bioWallBig")
-
 
 //Crafting region
 

@@ -1,0 +1,9 @@
+name: Bio core
+description: Properties and methods of application are unknown. Emits a very large amount of radiation.
+color: "#992525"
+explosiveness: 0
+flammability: 0
+radioactivity: 5
+cost: 1
+alwaysUnlocked: false
+research: cosmotissue

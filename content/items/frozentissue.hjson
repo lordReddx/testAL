@@ -1,0 +1,9 @@
+name: Frozen tissue
+description: Frozen biotissue in cryofluid. Good material for the production of ammunition.
+color: "#00FBFF"
+explosiveness: 0
+flammability: 0
+radioactivity: 1.6
+cost: 1
+alwaysUnlocked: false
+research: biotissue

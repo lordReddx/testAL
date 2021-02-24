@@ -1,0 +1,9 @@
+name: Metapanel
+description: A panel of metaglass. Has greater strength than metaglass, due to the complex structure.
+color: "#CCCEDB"
+explosiveness: 0
+flammability: 0
+radioactivity: 0
+cost: 1
+alwaysUnlocked: false
+research: metaglass

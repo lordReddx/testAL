@@ -1,0 +1,9 @@
+name: Biotissue
+description: It is highly radioactive. It is the basis for the creation of other biomaterials.
+color: "#DFFF9E"
+explosiveness: 0
+flammability: 0.1
+radioactivity: 1.3
+cost: 1
+alwaysUnlocked: false
+research: phase-fabric

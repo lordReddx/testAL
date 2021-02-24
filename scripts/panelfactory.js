@@ -17,7 +17,7 @@ try{
       craftTime:80,
     },
     */
-    {
+    /*{
       input:{
         liquids: ["water/5", "tAL-lava/5", "cryofluid/2"],
         power: 1.1
@@ -26,7 +26,7 @@ try{
         items: ["tAL-solidstone/2"],
       },
       craftTime: 35
-    },
+    },*/
     {
       input:{
         items: ["tAL-solidstone/4"],

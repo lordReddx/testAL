@@ -24,29 +24,29 @@ try{
         power: 3.4
       },
       output: {
-        items: ["coal/2"],
+        items: ["biotissue/2"],
       },
       craftTime: 90
     },
     {
       input: {
-        items: ["coal/4","thorium/5","plastanium/2"],
+        items: ["biotissue/4","thorium/5","plastanium/2"],
         liquids: ["water/3.4"],
         power: 2.1
       },
       output: {
-        items: ["tAL-biopanel/4"],
+        items: ["biopanel/4"],
       },
       craftTime: 300
     },
     {
       input: {
-        items: ["tAL-biopanel/2","surge-alloy/1","plastanium/2"],
+        items: ["biopanel/2","surge-alloy/1","plastanium/2"],
         liquids: ["cryofluid/3"],
         power: 5
       },
       output: {
-        items: ["tAL-bioalloy/1"],
+        items: ["bioalloy/1"],
       },
       craftTime: 330
     },
@@ -54,12 +54,12 @@ try{
 
       input: {
 
-        items: ["coal/1"],
-        liquids: ["tAL-acid/3.2"],
+        items: ["biotissue/1"],
+        liquids: ["acid/3.2"],
         power: 5.1
       },
       output: {
-        items: ["tAL-acidtissue/1"],
+        items: ["acidtissue/1"],
       },
       craftTime: 300
     },
@@ -67,12 +67,12 @@ try{
     
       input: {
     
-        items: ["coal/1", "titanium/2"],
+        items: ["biotissue/1", "titanium/2"],
         liquids: ["cryofluid/3"],
         power: 5.1
       },
       output: {
-        items: ["tAL-frozentissue/1"],
+        items: ["frozentissue/1"],
       },
       craftTime: 300
     },
@@ -80,12 +80,12 @@ try{
     
       input: {
     
-        items: ["coal/1", "blast-compound/3"],
-        liquids: ["tAL-lava/2"],
+        items: ["biotissue/1", "blast-compound/3"],
+        liquids: ["lava/2"],
         power: 5.1
       },
       output: {
-        items: ["tAL-lavatissue/1"],
+        items: ["lavatissue/1"],
       },
       craftTime: 300
     },
@@ -93,12 +93,12 @@ try{
     
       input: {
     
-        items: ["tAL-acidtissue/2", "tAL-frozentissue/2", "tAL-lavatissue/2"],
+        items: ["acidtissue/2", "frozentissue/2", "lavatissue/2"],
         liquids: ["cryofluid/3"],
         power: 4.1
       },
       output: {
-        items: ["tAL-cosmotissue/2"],
+        items: ["cosmotissue/2"],
       },
       craftTime: 120
     },
@@ -106,18 +106,18 @@ try{
     
       input: {
     
-        items: ["tAL-cosmotissue/100"],
+        items: ["cosmotissue/100"],
         power: 6
       },
       output: {
-        items: ["tAL-biocore/1"],
+        items: ["biocore/1"],
       },
       craftTime: 300
     },
   ],{
     draw(){
-      Draw.rect(Core.atlas.find("tAL-bioreactor-weave"), this.x, this.y);
-      Draw.rect(Core.atlas.find("tAL-bioreactor-bottom"), this.x, this.y);
+      Draw.rect(Core.atlas.find("bioreactor-weave"), this.x, this.y);
+      Draw.rect(Core.atlas.find("bioreactor-bottom"), this.x, this.y);
       biocrafter.drawer = new DrawWeave();
     }
   },{

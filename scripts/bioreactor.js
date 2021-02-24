@@ -17,7 +17,7 @@ try{
       craftTime:80,
     },
     */
-    {
+    /*{
       input:{
         items: ["plastanium/6","phase-fabric/2","metaglass/5"],
         liquids: ["water/2"],
@@ -27,7 +27,7 @@ try{
         items: ["tAL-biotissue/2"],
       },
       craftTime: 90
-    },
+    },*/
     {
       input: {
         items: ["tAL-biotissue/4","thorium/5","plastanium/2"],

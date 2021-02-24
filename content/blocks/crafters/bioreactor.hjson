@@ -1,0 +1,20 @@
+name: Bioreactor
+
+requirements: [
+	copper/700
+	lead/700
+	metaglass/120
+	graphite/340
+	silicon/670
+	thorium/300
+	plastanium/450
+	phase-fabric/20
+	surge-alloy/120
+	steel/200
+	silver/130
+	gold/50
+	composite/25
+	]
+
+research: phase-weaver
+//fCP

@@ -24,13 +24,13 @@ try{
         power: 3.4
       },
       output: {
-        items: ["tAL-steel/2"],
+        items: ["coal/2"],
       },
       craftTime: 90
     },
     {
       input: {
-        items: ["tAL-steel/4","thorium/5","plastanium/2"],
+        items: ["coal/4","thorium/5","plastanium/2"],
         liquids: ["water/3.4"],
         power: 2.1
       },
@@ -54,7 +54,7 @@ try{
 
       input: {
 
-        items: ["tAL-steel/1"],
+        items: ["coal/1"],
         liquids: ["tAL-acid/3.2"],
         power: 5.1
       },
@@ -67,7 +67,7 @@ try{
     
       input: {
     
-        items: ["tAL-steel/1", "titanium/2"],
+        items: ["coal/1", "titanium/2"],
         liquids: ["cryofluid/3"],
         power: 5.1
       },
@@ -80,7 +80,7 @@ try{
     
       input: {
     
-        items: ["tAL-steel/1", "blast-compound/3"],
+        items: ["coal/1", "blast-compound/3"],
         liquids: ["tAL-lava/2"],
         power: 5.1
       },

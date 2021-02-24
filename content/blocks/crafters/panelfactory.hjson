@@ -5,7 +5,6 @@ requirements: [
 	lead/250
 	metaglass/100
 	silicon/60
-	steel/70
 	]
 
 research: kiln

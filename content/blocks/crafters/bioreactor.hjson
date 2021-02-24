@@ -10,10 +10,6 @@ requirements: [
 	plastanium/450
 	phase-fabric/20
 	surge-alloy/120
-	steel/200
-	silver/130
-	gold/50
-	composite/25
 	]
 
 research: phase-weaver

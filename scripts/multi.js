@@ -62,7 +62,7 @@ const multi = multiLib.MultiCrafter(GenericCrafter, GenericCrafter.GenericCrafte
   },
   /*this is Object constructor. This way is much better than literal way{a:123}
   you can replace this with {} if you don't want to modify entity*/
-  function Extra() {
+  /*function Extra()*/ {
     /*you can use customUpdate=function(){}. this function excuted before update()
     also this.draw=function(){}
     you can customize entity here.

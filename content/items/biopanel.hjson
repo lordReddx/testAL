@@ -6,4 +6,4 @@ flammability: 0.1
 radioactivity: 0.9
 cost: 1
 alwaysUnlocked: false
-research: biotissue
+research: tAL-biotissue

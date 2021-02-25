@@ -18,8 +18,6 @@
 
 //Crafting region
 
-require("bioreactor")
-require("panelfactory")
 
 //Units region
 

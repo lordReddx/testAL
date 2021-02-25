@@ -1,9 +1,0 @@
-name: Solid stone
-description: Strong fragments of stone, extracted from hard rocks protruding from the ground.
-color: "#4D4E58"
-explosiveness: 0
-flammability: 0
-radioactivity: 0
-cost: 1
-alwaysUnlocked: false
-research: copper

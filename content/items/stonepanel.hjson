@@ -1,9 +1,0 @@
-name: Stone panel
-description: Very strong material, but brittle when heated.
-color: "#7B7B7B"
-explosiveness: 0
-flammability: 0
-radioactivity: 0
-cost: 1
-alwaysUnlocked: false
-research: solidstone

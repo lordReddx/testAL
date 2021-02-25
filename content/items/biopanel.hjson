@@ -1,9 +1,0 @@
-name: Biopanel
-description: Very brittle material, widely used to create various high-level turrets.
-color: "#ECFFD6"
-explosiveness: 0
-flammability: 0.1
-radioactivity: 0.9
-cost: 1
-alwaysUnlocked: false
-research: tAL-biotissue

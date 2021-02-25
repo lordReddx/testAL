@@ -18,6 +18,7 @@
 
 //Crafting region
 
+require("multi")
 
 //Units region
 

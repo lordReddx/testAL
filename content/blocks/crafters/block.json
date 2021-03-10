@@ -1,0 +1,10 @@
+
+name: block
+description: Touch me!
+
+category: crafting
+solid: true
+update: true
+configurable: true
+
+research: core-shard

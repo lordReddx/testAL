@@ -55,15 +55,15 @@ hasLiquids
 hasPower
 */
 //using example without .json file. I don't recommand this way because you can't use mod item as requirements.
-multi.localizedName = "craf";
+/*multi.localizedName = "craf";
 multi.description = "craf";
 multi.itemCapacity = 30;
 multi.liquidCapacity = 20;
 multi.size = 4;
 multi.health = 100;
 multi.craftEffect = Fx.pulverizeMedium;
-multi.updateEffect = Fx.none;
+multi.updateEffect = Fx.none;*/
 /*true: dump items and liquids of output according to button
 false: dump items and liquids of output unconditionally*/
-multi.dumpToggle = false;
-multi.requirements(Category.crafting, ItemStack.with(Items.copper, 75));
+//multi.dumpToggle = false;
+//multi.requirements(Category.crafting, ItemStack.with(Items.copper, 75));

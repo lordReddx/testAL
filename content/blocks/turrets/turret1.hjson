@@ -1,0 +1,36 @@
+type: ItemTurret
+name: turret1
+description: turret for test
+
+health: 2500
+size: 2
+requirements: [ 
+	copper/100
+	] 
+category: turret
+
+reloadTime: 120
+
+range: 240
+rotateSpeed: 7.8
+
+shootEffect: shootBig
+smokeEffect: fireSmoke
+maxAmmo: 15
+targetAir: true
+targetGround: true
+
+ammoTypes: {
+	graphite: {
+		type: BasicBulletType
+		lifetime: 4.8
+		speed: 50
+		damage: 100
+		width: 10
+		height: 14
+		splashDamage: 80
+		splashDamageRadius: 64
+		}
+	} 
+
+research: duo

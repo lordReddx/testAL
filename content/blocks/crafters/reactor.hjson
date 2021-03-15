@@ -1,5 +1,5 @@
-localizedName: Bioreactor
-description: Produces high-tech biomaterials.
+localizedName: reactor
+description: Produces high-tech materials.
 
 health: 750
 size: 4
@@ -13,10 +13,6 @@ requirements: [
 	plastanium/450
 	phase-fabric/20
 	surge-alloy/120
-	steel/200
-	silver/130
-	gold/50
-	composite/25
  ]
 category: crafting
 

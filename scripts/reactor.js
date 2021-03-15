@@ -34,7 +34,7 @@ const multi = multiLib.MultiCrafter(GenericCrafter, GenericCrafter.GenericCrafte
     {
           input: {
             items: ["tAL-itemC/4", "thorium/5","plastanium/2"],
-            liquids: [water/3.4],
+            liquids: ["water/3.4" ],
             power: 2.1
           },
           output: {

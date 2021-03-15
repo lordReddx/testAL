@@ -2,7 +2,7 @@ localizedName: reactor
 description: Produces high-tech materials.
 
 health: 750
-size: 4
+size: 3
 requirements: [
   copper/700
 	lead/700

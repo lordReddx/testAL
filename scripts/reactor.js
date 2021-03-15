@@ -88,7 +88,7 @@ const multi = multiLib.MultiCrafter(GenericCrafter, GenericCrafter.GenericCrafte
         },
           {
             input: {
-              items: ["acidC/2", "tal-frozenC/2", "tal-lavaC/2"],
+              items: ["tal-acidC/2", "tal-frozenC/2", "tal-lavaC/2"],
               liquids: ["cryofluid/3"],
               power: 4.1
             },

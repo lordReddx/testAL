@@ -27,83 +27,83 @@ const multi = multiLib.MultiCrafter(GenericCrafter, GenericCrafter.GenericCrafte
         power: 3.4
       },
       output: {
-        items: ["tAL-itemC/2"]
+        items: ["tal-itemC/2"]
       },
       craftTime: 90
     },
     {
           input: {
-            items: ["tAL-itemC/4", "thorium/5","plastanium/2"],
+            items: ["tal-itemC/4", "thorium/5","plastanium/2"],
             liquids: ["water/3.4" ],
             power: 2.1
           },
           output: {
-            items: ["tAL-itempanel/4"]
+            items: ["tal-itempanel/4"]
           },
           craftTime: 300
         },
     {
       input: {
-        items: ["tAL-itempanel/2", "surge-alloy/1","plastanium/2"],
+        items: ["tal-itempanel/2", "surge-alloy/1","plastanium/2"],
         liquids: ["cryofluid/3"],
         power: 5
       },
       output: {
-        items: ["tAL-itemalloy/1"]
+        items: ["tal-itemalloy/1"]
       },
       craftTime: 330
     },
     {
       input: {
-        items: ["tAL-itemC/1"],
-        liquids: ["tAL-acid/3.2"],
+        items: ["tal-itemC/1"],
+        liquids: ["tal-acid/3.2"],
         power: 5.1
       },
       output: {
-        items: ["tAL-acidC/1"]
+        items: ["tal-acidC/1"]
       },
       craftTime: 300
     },
     {
       input: {
-        items: ["tAL-itemC/1", "titanium/2"],
+        items: ["tal-itemC/1", "titanium/2"],
         liquids: ["cryofluid/3"],
         power: 5.1
       },
       output: {
-        items: ["tAL-frozenC/1"]
+        items: ["tal-frozenC/1"]
       },
       craftTime: 300
     },
         {
           input: {
-            items: ["tAL-itemC/1", "blast-compound/3"],
-            liquids: ["tAL-lava/2"],
+            items: ["tal-itemC/1", "blast-compound/3"],
+            liquids: ["tal-lava/2"],
             power: 5.1
           },
           output: {
-            items: ["tAL-lavaC/1"]
+            items: ["tal-lavaC/1"]
           },
           craftTime: 300
         },
           {
             input: {
-              items: ["acidC/2", "tAL-frozenC/2", "tAL-lavaC/2"],
+              items: ["acidC/2", "tal-frozenC/2", "tal-lavaC/2"],
               liquids: ["cryofluid/3"],
               power: 4.1
             },
             output: {
-              items: ["tAL-cosmoC/2"]
+              items: ["tal-cosmoC/2"]
             },
             craftTime: 120
           },
           {
             input: {
-              items: ["tAL-cosmoC/100"],
+              items: ["tal-cosmoC/100"],
               power: 6
             },
             output: {
-              items: ["tAL-itemc0/1"]
+              items: ["tal-itemc0/1"]
             },
             craftTime: 300
           },
@@ -114,9 +114,9 @@ const multi = multiLib.MultiCrafter(GenericCrafter, GenericCrafter.GenericCrafte
   you can replace this with {} if you don't want to modify entity*/
   function Extra() {
     this.draw=function(){
-let region = Core.atlas.find("tAL-bioreactor-weave")
+let region = Core.atlas.find("tal-bioreactor-weave")
 Draw.rect(region, this.x, this.y);
-let bullet = Core.atlas.find("tAL-bioreactor-bottom")
+let bullet = Core.atlas.find("tal-bioreactor-bottom")
 Draw.rect(bullet, this.x, this.y)
 };
     /*you can use customUpdate=function(){}. this function excuted before update()

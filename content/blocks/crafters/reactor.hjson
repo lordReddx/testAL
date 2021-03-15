@@ -1,0 +1,29 @@
+localizedName: Bioreactor
+description: Produces high-tech biomaterials.
+
+health: 750
+size: 4
+requirements: [
+  copper/700
+	lead/700
+	metaglass/120
+	graphite/340
+	silicon/670
+	thorium/300
+	plastanium/450
+	phase-fabric/20
+	surge-alloy/120
+	steel/200
+	silver/130
+	gold/50
+	composite/25
+ ]
+category: crafting
+
+itemCapacity: 100
+liquidCapacity: 10
+craftEffect:   pulverize
+updateEffect:   none
+dumpToggle: true
+
+research: phase-weaver

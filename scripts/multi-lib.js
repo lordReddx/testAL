@@ -1,3 +1,205 @@
+const customValue = method => new StatValue() {
+    display: method
+}
+
+function MultiCrafterBuild() {
+    this.acceptItem = function(source, item) {
+        if(typeof this.block["getInputItemSet"] !== "function") return false;
+        if(this.items.get(item) >= this.getMaximumAccepted(item)) return false;
+        return this.block.getInputItemSet().contains(item);
+    };
+    this.acceptLiquid = function(source, liquid) {
+        if(typeof this.block["getInputLiquidSet"] !== "function") return false;
+        return this.block.getInputLiquidSet().contains(liquid);
+    };
+    this.removeStack = function(item, amount) {
+        var ret = this.super$removeStack(item, amount);
+        if(!this.items.has(item)) this.toOutputItemSet.remove(item);
+        return ret;
+    };
+    this.handleItem = function(source, item) {
+        var current = this._toggle;
+        if((this.block.doDumpToggle() ? current > -1 && this.block.getRecipes()[current].output.items.some(a => a.item == item) : this.block.getOutputItemSet().contains(item)) && !this.items.has(item)) this.toOutputItemSet.add(item);
+        this.items.add(item, 1);
+    };
+    this.handleStack = function(item, amount, tile, source) {
+        var current = this._toggle;
+        if((this.block.doDumpToggle() ? current > -1 && this.block.getRecipes()[current].output.items.some(a => a.item == item) : this.block.getOutputItemSet().contains(item)) && !this.items.has(item)) this.toOutputItemSet.add(item);
+        this.items.add(item, amount);
+    };
+    this.displayConsumption = function(table) {
+        if(typeof this.block["getRecipes"] !== "function") return;
+        const recs = this.block.getRecipes();
+        var z = 0;
+        var y = 0;
+        var x = 0;
+        var recLen = recs.length;
+        table.left();
+        //input 아이템, 액체 그림 띄우기
+        for(var i = 0; i < recLen; i++) {
+            var items = recs[i].input.items;
+            var liquids = recs[i].input.liquids;
+            //아이템
+            for(var j = 0, len = items.length; j < len; j++) {
+                (function(that, stack) {
+                    table.add(new ReqImage(new ItemImage(stack.item.icon(Cicon.medium), stack.amount), () => that.items != null && that.items.has(stack.item, stack.amount))).size(8 * 4);
+                })(this, items[j]);
+            };
+            z += len;
+            //액체
+            for(var l = 0, len = liquids.length; l < len; l++) {
+                (function(that, stack) {
+                    table.add(new ReqImage(new ItemImage(stack.liquid.icon(Cicon.medium), stack.amount), () => that.liquids != null && that.liquids.get(stack.liquid) > stack.amount)).size(8 * 4);
+                })(this, liquids[l]);
+            };
+            z += len;
+            //아이템 유뮤 바에서 레시피 구분및 자동 줄바꿈을 위해 정리된 input item 필요.
+            if(z == 0) {
+                table.image(Icon.cancel).size(8 * 4);
+                x += 1;
+            };
+            if(i < recLen - 1) {
+                var next = recs[i + 1].input;
+                y += next.items.length + next.liquids.length;
+                x += z;
+                if(x + y <= 8 && y != 0 || x + y <= 7 && y == 0) {
+                    table.image(Icon.pause).size(8 * 4);
+                    x += 1;
+                } else {
+                    table.row();
+                    x = 0;
+                };
+            };
+            y = 0;
+            z = 0;
+        }
+    };
+    this.getPowerProduction = function() {
+        var i = this._toggle;
+        if(i < 0 || typeof this.block["getRecipes"] !== "function") return 0;
+        var oPower = this.block.getRecipes()[i].output.power;
+        if(oPower > 0 && this._cond) {
+            if(this.block.getRecipes()[i].input.power > 0) {
+                this._powerStat = this.efficiency();
+                return oPower * this.efficiency();
+            } else {
+                this._powerStat = 1;
+                return oPower;
+            };
+        }
+        this._powerStat = 0;
+        return 0;
+    };
+    this.getProgressIncreaseA = function(i, baseTime) {
+        //when use power
+        if(typeof this.block["getRecipes"] !== "function" || this.block.getRecipes()[i].input.power > 0) return this.getProgressIncrease(baseTime);
+        else return 1 / baseTime * this.delta();
+    };
+    this.checkinput = function(i) {
+        const recs = this.block.getRecipes();
+        //items
+        var items = recs[i].input.items;
+        var liquids = recs[i].input.liquids;
+        if(!this.items.has(items)) return true;
+        //liquids
+        for(var j = 0, len = liquids.length; j < len; j++) {
+            if(this.liquids.get(liquids[j].liquid) < liquids[j].amount) return true;
+        };
+        return false;
+    };
+    this.checkoutput = function(i) {
+        const recs = this.block.getRecipes();
+        //items
+        var items = recs[i].output.items;
+        var liquids = recs[i].output.liquids;
+        for(var j = 0, len = items.length; j < len; j++) {
+            if(this.items.get(items[j].item) + items[j].amount > this.getMaximumAccepted(items[j].item)) return true;
+        };
+        //liquids
+        for(var j = 0, len = liquids.length; j < len; j++) {
+            if(this.liquids.get(liquids[j].liquid) + liquids[j].amount > this.block.liquidCapacity) return true;
+        };
+        return false;
+    };
+    this.checkCond = function(i) {
+        if(this.block.getRecipes()[i].input.power > 0 && this.power.status <= 0) {
+            this._condValid = false;
+            this._cond = false;
+            return false;
+        } else if(this.checkinput(i)) { //check power
+            this._condValid = false;
+            this._cond = false;
+            return false;
+        } else if(this.checkoutput(i)) {
+            this._condValid = true;
+            this._cond = false;
+            return false;
+        };
+        this._condValid = true;
+        this._cond = true;
+        return true;
+    };
+    this.customCons = function(i) {
+        const recs = this.block.getRecipes();
+        if(this.checkCond(i)) {
+            //do produce
+            if(this.progressArr[i] != 0 && this.progressArr[i] != null) {
+                this.progress = this.progressArr[i];
+                this.progressArr[i] = 0;
+            };
+            this.progress += this.getProgressIncreaseA(i, recs[i].craftTime);
+            this.totalProgress += this.delta();
+            this.warmup = Mathf.lerpDelta(this.warmup, 1, 0.02);
+            if(Mathf.chance(Time.delta * this.updateEffectChance)) Effects.effect(this.updateEffect, this.x + Mathf.range(this.size * 4), this.y + Mathf.range(this.size * 4));
+        } else this.warmup = Mathf.lerp(this.warmup, 0, 0.02);
+    };
+    this.customProd = function(i) {
+        const recs = this.block.getRecipes();
+        //consume items
+        var inputItems = recs[i].input.items;
+        var inputLiquids = recs[i].input.liquids;
+        var outputItems = recs[i].output.items;
+        var outputLiquids = recs[i].output.liquids;
+        var eItems = this.items;
+        var eLiquids = this.liquids;
+        for(var k = 0, len = inputItems.length; k < len; k++) eItems.remove(inputItems[k]);
+        //consume liquids
+        for(var j = 0, len = inputLiquids.length; j < len; j++) eLiquids.remove(inputLiquids[j].liquid, inputLiquids[j].amount);
+        //produce items
+        for(var a = 0, len = outputItems.length; a < len; a++) {
+            for(var aa = 0, amount = outputItems[a].amount; aa < amount; aa++) {
+                var oItem = outputItems[a].item
+                if(!this.put(oItem)) {
+                    if(!eItems.has(oItem)) this.toOutputItemSet.add(oItem);
+                    eItems.add(oItem, 1);
+                };
+            };
+        };
+        //produce liquids
+        for(var j = 0, len = outputLiquids.length; j < len; j++) {
+            var oLiquid = outputLiquids[j].liquid;
+            if(eLiquids.get(oLiquid) <= 0.001) this.toOutputLiquidset.add(oLiquid);
+            this.handleLiquid(this, oLiquid, outputLiquids[j].amount);
+        };
+        this.block.craftEffect.at(this.x, this.y);
+        this.progress = 0;
+    };
+    this.updateTile = function() {
+        if(typeof this.block["getRecipes"] !== "function") return;
+        if(this.timer.get(1, 60)) {
+            this.itemHas = 0;
+            this.items.each(item => this.itemHas++);
+        };
+        if(!Vars.headless && Vars.control.input.frag.config.getSelectedTile() != this) this.block.invFrag.hide();
+        const recs = this.block.getRecipes();
+        var recLen = recs.length;
+        var current = this._toggle;
+        //to not rewrite whole update
+        if(typeof this["customUpdate"] === "function") this.customUpdate();
+        //calls customCons and customProd
+        if(current >= 0) {
+            this.customCons(current);
+            if(this.progress >= 1) this.customProd(current);
         };
         var eItems = this.items;
         var eLiquids = this.liquids;

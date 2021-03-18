@@ -1,5 +1,5 @@
 type: ItemTurret
-name: turret1
+name: turret3
 description: turret for test
 
 health: 2500

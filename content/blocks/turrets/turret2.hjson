@@ -9,7 +9,7 @@ requirements: [
 	] 
 category: turret
 
-reloadTime: 120
+reloadTime: 60
 
 range: 240
 rotateSpeed: 7.8

@@ -1,2 +1,1 @@
-require("reactor");
-require("planets");
+require("category");

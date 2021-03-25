@@ -1,1 +1,2 @@
-require("category");
+require("planets");
+require("sectorPresets");

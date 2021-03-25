@@ -1,1 +1,0 @@
-const test = extend(Category, "test", {});

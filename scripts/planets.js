@@ -16,29 +16,29 @@ Events.on(ClientLoadEvent, () => {
     routros.localizedName = "Router";
 
     
-const plains = new SectorPreset("router1", mino, 1);
+const plains = new JavaAdapter(SectorPreset, {}, "router1", Planets.mino, 1);
 plains.captureWave = 45;
 plains.localizedName = "n2";
 plains.difficulty = 8;
 plains.alwaysUnlocked = false;
 
-const oldRefinery = new SectorPreset("router2", mino, 2);
+const oldRefinery = new JavaAdapter(SectorPreset, {}, "router2", Planets.mino, 2);
 oldRefinery.localizedName = "n3";
 oldRefinery.difficulty = 8;
 oldRefinery.alwaysUnlocked = false;
 
-const frozenMountains = new SectorPreset("router3", mino, 3);
+const frozenMountains = new JavaAdapter(SectorPreset, {}, "router3", Planets.mino, 3);
 frozenMountains.localizedName = "n1";
 frozenMountains.difficulty = 5;
 frozenMountains.alwaysUnlocked = true;
 
-const spaceshipWorkshop = new SectorPreset("router4", mino, 4);
+const spaceshipWorkshop = new JavaAdapter(SectorPreset, {}, "router4", Planets.mino, 4);
 spaceshipRepairShop.captureWave = 30;
 spaceshipRepairShop.localizedName = "n4";
 spaceshipRepairShop.difficulty = 5;
 spaceshipRepairShop.alwaysUnlocked = false;
 
-const spaceAirport = new SectorPreset("router5", mino, 5);
+const spaceAirport = new JavaAdapter(SectorPreset, {}, "router5", Planets.mino, 5);
 spaceAirport.localizedName = "n5";
 spaceAirport.difficulty = 9;
 spaceAirport.alwaysUnlocked = false;

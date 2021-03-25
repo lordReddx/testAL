@@ -13,7 +13,7 @@ oldRefinery.alwaysUnlocked = false;
 const frozenMountains = new SectorPreset("fm3", mino, 3);
 frozenMountains.localizedName = "n1";
 frozenMountains.difficulty = 5;
-frozenMountains.alwaysUnlocked = false;
+frozenMountains.alwaysUnlocked = true;
 
 const spaceshipWorkshop = new SectorPreset("sw4", mino, 4);
 spaceshipRepairShop.captureWave = 30;

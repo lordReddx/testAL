@@ -33,10 +33,10 @@ frozenMountains.difficulty = 5;
 frozenMountains.alwaysUnlocked = true;
 
 const spaceshipWorkshop = new SectorPreset("router4", mino, 4);
-spaceshipRepairShop.captureWave = 30;
-spaceshipRepairShop.localizedName = "n4";
-spaceshipRepairShop.difficulty = 5;
-spaceshipRepairShop.alwaysUnlocked = false;
+spaceshipWorkshop.captureWave = 30;
+spaceshipWorkshop.localizedName = "n4";
+spaceshipWorkshop.difficulty = 5;
+spaceshipWorkshop.alwaysUnlocked = false;
 
 const spaceAirport = new SectorPreset("router5", mino, 5);
 spaceAirport.localizedName = "n5";

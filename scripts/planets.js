@@ -19,5 +19,5 @@ Events.on(ClientLoadEvent, () => {
         var h = new SectorPreset("router" + i, routros, i);
         h.localizedName = "Router" + i;
         h.alwaysUnlocked = true;
-    };
+    };*/
 });

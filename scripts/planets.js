@@ -13,10 +13,5 @@ Events.on(ClientLoadEvent, () => {
     routros.atmosphereRadIn = 0.1;
     routros.atmosphereRadOut = 0.3;
     routros.alwaysUnlocked = true;
-    routros.localizedName = "Router";
-
-    for(var i = 0; i < 5; i++){
-        var h = new SectorPreset("sector" + i, routros, i);
-        h.alwaysUnlocked = false;
-    };
+    routros.localizedName = "test";
 });

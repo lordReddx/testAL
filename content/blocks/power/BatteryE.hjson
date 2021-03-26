@@ -1,0 +1,9 @@
+description: makes boom
+size: 1
+requirements: [
+	copper/6
+	graphite/3
+	]
+category: power
+research: battery-large
+health: 60

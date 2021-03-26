@@ -7,3 +7,4 @@ requirements: [
 category: power
 research: battery-large
 health: 60
+powerBuffered: 742880

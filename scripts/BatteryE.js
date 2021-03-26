@@ -1,6 +1,6 @@
 const dirs = require("dirslib");
 
-const explode = extend(Battery, "BatteryE", {});
+const explode = extendContent(Battery, "BatteryE", {});
 
 explode.radius = 10;
 explode.damage = 100;

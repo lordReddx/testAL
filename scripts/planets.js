@@ -20,12 +20,12 @@ const plains = new SectorPreset("router1", mino, 1);
 plains.captureWave = 45;
 plains.localizedName = "Plains";
 plains.difficulty = 8;
-plains.alwaysUnlocked = false;
+plains.alwaysUnlocked = true;
 
 const oldRefinery = new SectorPreset("router2", mino, 2);
 oldRefinery.localizedName = "Old refinery";
 oldRefinery.difficulty = 8;
-oldRefinery.alwaysUnlocked = false;
+oldRefinery.alwaysUnlocked = true;
 
 const frozenMountains = new SectorPreset("router3", mino, 3);
 frozenMountains.localizedName = "Frozen mountains";
@@ -36,10 +36,10 @@ const spaceshipWorkshop = new SectorPreset("router4", mino, 4);
 spaceshipWorkshop.captureWave = 30;
 spaceshipWorkshop.localizedName = "Spaceship workshop";
 spaceshipWorkshop.difficulty = 5;
-spaceshipWorkshop.alwaysUnlocked = false;
+spaceshipWorkshop.alwaysUnlocked = true;
 
 const spaceAirport = new SectorPreset("router5", mino, 5);
 spaceAirport.localizedName = "Space airport";
 spaceAirport.difficulty = 9;
-spaceAirport.alwaysUnlocked = false;
+spaceAirport.alwaysUnlocked = true;
 });

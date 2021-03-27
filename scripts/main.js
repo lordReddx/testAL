@@ -1,2 +1,1 @@
 require("planets");
-require("sectorPresets");

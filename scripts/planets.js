@@ -1,8 +1,8 @@
 Events.on(ClientLoadEvent, () => {
-    const mino = new Planet("mino", Planets.sun, 1, 3);
+    const mino = new Planet("mino", Planets.sun, 1, 1);
     mino.generator = new SerpuloPlanetGenerator();
     mino.mesh = new HexMesh(mino, 5);
-    mino.orbitRadius = 7;
+    mino.orbitRadius = 10;
     mino.orbitTime = 1.5 * 30;
     mino.rotateTime = 15;
     mino.bloom = true;

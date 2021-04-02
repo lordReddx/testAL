@@ -1,5 +1,5 @@
-type: ItemTurret
-name: turrett
+
+
 description: turret for test
 
 health: 2500
@@ -20,17 +20,5 @@ maxAmmo: 15
 targetAir: true
 targetGround: true
 
-ammoTypes: {
-	graphite: {
-		type: BasicBulletType
-		lifetime: 4.8
-		speed: 50
-		damage: 100
-		width: 10
-		height: 14
-		splashDamage: 80
-		splashDamageRadius: 64
-		}
-	} 
 
 research: duo

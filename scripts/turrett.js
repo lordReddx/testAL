@@ -190,7 +190,7 @@ const ephemeron = extendContent(PowerTurret, "turrett", {
 });
 ephemeron.animated = settingLib.settingAnimatedSprite();
 ephemeron.chargeTime = 60;
-ephemeron.shootType = ephemeronBullet;
+ephemeron.shootType = LaserBoltBulletType;
 ephemeron.heatRegions = [];
 ephemeron.animationRegions = [];
 ephemeron.entityType = prov(() => {

@@ -7,7 +7,7 @@ const ephemeron = extendContent(PowerTurret, "turrett", {
 		this.super$load();
 		
 		this.baseRegion = Core.atlas.find("tAL-block-" + this.size);
-		for(var i = 0; i < 3; i++){
+		for(var i = 0; i < 9; i++){
 			this.animationRegions[i] = Core.atlas.find(this.name + "-frame-" + (i + 1));
 			this.heatRegions[i] = Core.atlas.find(this.name + "-heat-" + (i + 1));
 		};
